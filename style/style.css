@@ -109,7 +109,6 @@ h6 {
   background: url(../img/backround-1.png) no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
   min-height: 100vh;
 }
 
@@ -196,8 +195,10 @@ h6 {
             transition-duration: 1s;
     background-color: dimgray;
     position: relative;
-    height: 100%;
-    top: -100%;
+    min-height: 100vh;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
   .nav-menu ul {
     display: -webkit-box;
@@ -222,7 +223,9 @@ h6 {
             order: -1;
   }
   .nav-menu.active {
-    top: 0;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .generation {
